@@ -7,28 +7,29 @@ image: maven:3.3.9
 
 pipelines:
   branches:
-   *-SNAPSHOT:
+    SNAPSHOT:
       - step:
-        caches:
-          - maven
-        script:
-          - bash configure-maven.sh
-          - mvn -V B -s settings.xml deploy -DaltDeploymentRepository=Gradecak-Repo::default::ftp://ftp.gradecak.com:23131/snapshots
+          caches:
+             - maven
+          script:
+            - bash configure-maven.sh
+            - mvn -V B -s settings.xml deploy -DaltDeploymentRepository=Gradecak-Repo::default::ftp://ftp.gradecak.com:23131/snapshots
+          
     dev:
       - step:
-        caches:
-          - maven
-        script:
-          - bash configure-maven.sh
-          - mvn -V B -s settings.xml deploy -DaltDeploymentRepository=Gradecak-Repo::default::ftp://ftp.gradecak.com:23131/snapshots
+          caches:
+            - maven
+          script:
+            - bash configure-maven.sh
+            - mvn -V B -s settings.xml deploy -DaltDeploymentRepository=Gradecak-Repo::default::ftp://ftp.gradecak.com:23131/snapshots
     
     master:
       - step:
-        caches:
-          - maven
-        script:
-          - bash configure-maven.sh
-          - mvn -V B -s settings.xml deploy -DaltDeploymentRepository=Gradecak-Repo::default::ftp://ftp.gradecak.com:23131/releases
+          caches:
+            - maven
+          script:
+            - bash configure-maven.sh
+            - mvn -V B -s settings.xml deploy -DaltDeploymentRepository=Gradecak-Repo::default::ftp://ftp.gradecak.com:23131/releases
           
   default:
     - step:
