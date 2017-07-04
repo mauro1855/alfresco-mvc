@@ -6,9 +6,9 @@ since Alfresco MVC 5.0.0
 - include a deployable alfresco project (alfresco-mvc-samples-bom/alfresco-5.2.e). You need to configure the database and alf_data
 - an AMP artifact can be build from the source code (mvn clean package). You will find it under alfresco-mvc-dist/target. However, it is better to include the dependencies in your build
 
-Personally I do not like webscripts because of the boilerplate code that comes with them (XML, FTL, Java/Javascript). Also I am not a big fan of javascript on the server side as in a medium sized application that becomes unmaintainable. That is why I wrote Alfresco @MVC.
+Personally I do not like webscripts because of the boilerplate code that comes with them (XML, FTL, Java/Javascript). Also I am not a big fan of javascript on the server side as in a medium sized application that becomes unmaintainable. That is why I wrote Alfresco-MVC.
 
-Alfresco @MVC consist of several libraries, REST, AOP, QueryTemplate, Spring-DATA. REST and AOP have no third party dependencies, where QueryTemplate and Spring-DATA do have. 
+Alfresco-MVC consist of several libraries, REST, AOP, QueryTemplate, Spring-DATA. REST and AOP have no third party dependencies, where QueryTemplate and Spring-DATA do have. 
 
 Alfresco-MVC DATA
 ===
@@ -46,7 +46,7 @@ public class AlfrescoMvcDataModuleConfig extends AlfrescoMvcDataConfig{
 
 Alfresco-MVC REST
 ===
-This small library enables the usage of Spring @MVC within Alfresco. Instead of writing webscripts and all the glue configuration that goes with that, you can simply write Springframework Controllers, Services/Components, ... with Spring annotations.
+This small library enables the usage of Spring MVC within Alfresco. Instead of writing webscripts and all the glue configuration that goes with that, you can simply write Springframework Controllers, Services/Components, ... with Spring annotations.
 
 ```
 @Controller
@@ -199,7 +199,7 @@ Supported Alfresco versions
 
 Sample Applications
 ----
-Alfresco @MVC comes with a couple of sample applications that are located in /alfresco-mvc-samples-bom
+Alfresco-MVC comes with a couple of sample applications that are located in /alfresco-mvc-samples-bom
 
 
 - alfresco-mvc-rest-sample 			=> http://localhost:8080/alfresco/service/mvc/rest/sample
@@ -210,7 +210,7 @@ Alfresco @MVC comes with a couple of sample applications that are located in /al
 - alfresco-mvc-data-sample 			=> http://localhost:8080/alfresco/service/mvc/data/document 
                                        http://localhost:8080/alfresco/service/mvc/data/folder
 
-alfresco-mvc-querytemplate-sample is the most complete sample that reassemble all the features of Alfresco @MVC
+alfresco-mvc-querytemplate-sample is the most complete sample that reassemble all the features of Alfresco-MVC in a single place
 
 Maven dependency:
 ----
